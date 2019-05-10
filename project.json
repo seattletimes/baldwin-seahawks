@@ -1,0 +1,20 @@
+{
+  "s3": {
+    "stage": {
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "legal-fable"
+    },
+    "live": {
+      "bucket": "projects.seattletimes.com",
+      "path": "2019/sports/doug-baldwin-seahawks-top-moments"
+    }
+  },
+  "title": "Anything but pedestrian: The top moments of Doug Baldwin’s iconic Seahawks career",
+  "description": "Doug Baldwin’s iconic eight-year career in Seattle is over, but he made an imprint on the franchise and on the city along the way. We look back at his most memorable moments.",
+  "url": "https://projects.seattletimes.com/2019/sports/doug-baldwin-seahawks-top-moments",
+  "slug": "doug-baldwin-seahawks-top-moments",
+  "tags": ["interactive", "parallax"],
+  "image": "",
+  "production": true,
+  "sheets": ["1-KvFsuuflxUxsNtFTW2CgY7cgxATVpe0RQMlbOL36BA"]
+}

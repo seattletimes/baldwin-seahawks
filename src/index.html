@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Oswald|Open+Sans:600,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <%= t.include("partials/_adHead.html", json.project) %>
+  </head>
+  <body>
+
+    <div class="fixed-frame"></div>
+
+    <main class="scroll">
+
+      <div class="ad-spot">
+        <%= t.include("partials/_ad.html", { type: "banner" }) %>
+      </div>
+      <header class="intro">
+        <nav class="logo-bar">
+          <a class="logo" href="http://seattletimes.com">
+            <img src="./assets/st-logo.png">
+          </a>
+        </nav>
+
+        <div class="contents">
+
+          <h1><%= json.project.title %></h1>
+          <p>Doug Baldwin’s Seahawks legacy will consist of far more than football.</p>
+          <p>Throughout his eight seasons with the Seahawks he often made as much news for his efforts in the community and his perceptive takes on the issues of the day as he did for anything that happened on the field.</p>
+<p>But he also never seemed to forget that it was what he could do on the field that had gotten him to this point in the first place.</p>
+<p>“I’m not the fastest, the strongest, the most athletic, the tallest,” he said in a 2015 interview with the Seattle Times.</p>
+<p>But if he wasn’t the tallest or the fastest — in fact, he is 5-10, 192 — few played bigger, as evident in the stats he leaves behind, ranking second all-time in touchdown catches among Seattle receivers with 49 and third in receptions (493) and receiving yards (6,552).</p>
+<p>Here are five moments among the many that stand out the most.</p>
+          <!-- <div class="social">
+            <a class="share"></a>
+          </div> -->
+
+          <p class="byline">
+            <span class="byline-name">By Bob Condotta and Evan Webeck / The Seattle Times</span>
+          </p>
+
+          <p class="instructions">
+            <i class="fa fa-chevron-down"></i>
+            Scroll to continue
+            <i class="fa fa-chevron-down"></i>
+
+        </div>
+
+      </header>
+
+    <% json.photos.sort(function(a, b) { return a.order - b.order }).forEach(function(item, i) { %>
+      <%= t.include("_details.html", { item: item, index: i }) %>
+    <% }) %>
+
+      <footer>
+        <a class="logo" href="http://seattletimes.com">
+          <img src="./assets/st-logo.png">
+        </a>
+        <a class="share-bottom"></a>
+      </footer>
+
+    </main>
+
+    <aside class="no-mobile-portrait">
+      <a class="ok" href="javascript:;">
+        <i class="fa fa-times-circle-o"></i>
+      </a>
+      Hey! This page is designed to look best in landscape mode. Rotate your device to see for yourself.
+      <i class="fa fa-rotate-left rotation"></i>
+    </aside> 
+   
+
+    <script src="app.js"></script>
+    <%= t.include("partials/_adFoot.html") %>
+    <%= t.include("partials/_workHere.html") %>
+  </body>
+</html>
